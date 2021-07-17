@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./style.css">
+    <title>Github Search</title>
+  </head>
+  <body>
+    <div id="stars">
+        <div class="star"></div>
+    </div>
+    <div class="serchbox container" id="search">
+        <img src="./images/PngItem_1280311.png" width="120px" alt="">
+        <h1 class="title">Enter Username of GitHub User</h1>
+        <form id="formSearch">
+            <input type="text" placeholder="Enter username" class="form-control" >
+            <button type="submit" class="btn btn-primary">Search</button>
+        </form>
+
+    </div>
+
+    <div class="result" id="result">
+        <div class="userImage" id="userImage">    
+        </div>
+        <div class="user-detail">
+            <div class="username" id="userName">
+            </div>
+        </div>
+        <div class="follower" id="followers">
+        </div>
+        <div class="reposotory" id="repoArea">
+        </div>
+        
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+    <script src="./main.js"></script>
+    <script>
+        var stars = document.getElementById('stars')
+ 
+ // js randomly generates meteors
+for (var j=0;j<30;j++) {
+var newStar = document.createElement("div")
+newStar.className = "star"
+newStar.style.top = randomDistance(500, -100) + 'px'
+newStar.style.left = randomDistance(1300, 300) + 'px'
+stars.appendChild(newStar)
+}
+
+ // Encapsulate random number method
+function randomDistance (max, min) {
+var distance = Math.floor(Math.random() * (max - min + 1) + min)
+return distance
+}
+var star = document.getElementsByClassName('star')
+
+ // Add animation delay to the meteor
+for (var i = 0, len = star.length; i < len; i++)
+{
+star[i].style.animationDelay = i % 6 == 0 ? '0s' : i * 0.8 + 's'
+}
+
+    </script>
+  </body>
+</html>
