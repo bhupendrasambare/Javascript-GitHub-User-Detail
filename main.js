@@ -1,6 +1,29 @@
 const search = document.querySelector("#search");
 const result = document.querySelector("#result");
 const form = document.querySelector("#formSearch");
+        var stars = document.getElementById('stars')
+ 
+ // js randomly generates meteors
+for (var j=0;j<30;j++) {
+var newStar = document.createElement("div")
+newStar.className = "star"
+newStar.style.top = randomDistance(500, -100) + 'px'
+newStar.style.left = randomDistance(1300, 300) + 'px'
+stars.appendChild(newStar)
+}
+
+ // Encapsulate random number method
+function randomDistance (max, min) {
+var distance = Math.floor(Math.random() * (max - min + 1) + min)
+return distance
+}
+var star = document.getElementsByClassName('star')
+
+ // Add animation delay to the meteor
+for (var i = 0, len = star.length; i < len; i++)
+{
+star[i].style.animationDelay = i % 6 == 0 ? '0s' : i * 0.8 + 's'
+}
 function reposotorynumber(repourl)
 {
         var total='';
