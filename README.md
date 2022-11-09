@@ -2,16 +2,22 @@
 # JavaScript Github User Searching
 
 
+## Getting started
+
+#### URL TO PROJECT
+
+### <a href="https://htmlpreview.github.io/?https://github.com/bhupendrasambare/Javascript-GitHub-User-Detail/blob/main/index.html"  target="_blank" >Website</a>
+
 
 ## API Reference
 
 #### Used github api for user details
 
-```http
+```bash
   GET https://api.github.com/users/{user name}
 ```
 
-```http
+```bash
   GET https://api.github.com/users/{user name}/repos
 ```
 
