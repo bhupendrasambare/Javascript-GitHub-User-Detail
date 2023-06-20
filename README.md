@@ -6,7 +6,7 @@
 
 #### URL TO PROJECT
 
-### <a href="https://htmlpreview.github.io/?https://github.com/bhupendrasambare/Javascript-GitHub-User-Detail/blob/main/index.html"  target="_blank" >Website</a>
+### <a href="https://htmlpreview.github.io/?http://github.com/bhupendrasambare/Javascript-GitHub-User-Detail/blob/main/index.html"  target="_blank" >Website</a>
 
 
 ## API Reference
